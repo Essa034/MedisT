@@ -3,7 +3,7 @@
 =======
 MedisT
 
-This web-based project is designed to provide users with a personalized health dashboard, helping them manage their health-related information, appointments, medication details, and reminders. The user interface (UI) is structured with the following core components:
+This web-based project is designed to provide users with a personalized health dashboard, helping them manage their health-related information, appointments, medication details, and reminders.
 Team name: TripleXXX'S
 
 
