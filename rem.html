@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Reminders</title>
+    <link rel="stylesheet" href="rem.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Health Dashboard</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="rem.html" class="active">Reminders</a></li>
+            <li><a href="diet.html">Diet Plans</a></li>
+            <li><a href="sett.html">Settings</a></li>
+            <li><a href="tips.html">Health Tips</a></li>
+            <li><a href="login.html" target="_self">Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <header class="top-header">
+            <h1>Your Health Reminders</h1>
+        </header>
+
+        <section class="reminder-container">
+            <form id="reminder-form">
+                <input type="text" id="reminder-input" placeholder="Enter a new reminder">
+                <button type="submit">Add Reminder</button>
+            </form>
+
+            <ul id="reminder-list"></ul>
+        </section>
+    </main>
+
+    <script src="reminders.js"></script>
+</body>
+</html>

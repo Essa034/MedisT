@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plans</title>
+    <link rel="stylesheet" href="diet.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Health Dashboard</h2>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="rem.html">Reminders</a></li>
+            <li><a href="diet.html" class="active">Diet Plans</a></li>
+            <li><a href="sett.html">Settings</a></li>
+            <li><a href="tips.html">Health Tips</a></li>
+            <li><a href="login.html" target="_self">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <header class="top-header">
+            <h1>Personalized Diet Plans</h1>
+        </header>
+
+        <section class="diet-container">
+            <h2>Recommended Diet Plans</h2>
+            <div class="diet-grid">
+                <div class="diet-card">
+                    <h3>Weight Loss Plan</h3>
+                    <p>Includes high-protein, low-carb meals with healthy fats.</p>
+                    <button>View Plan</button>
+                </div>
+
+                <div class="diet-card">
+                    <h3>Muscle Gain Plan</h3>
+                    <p>Rich in protein, complex carbs, and essential nutrients.</p>
+                    <button>View Plan</button>
+                </div>
+
+                <div class="diet-card">
+                    <h3>Balanced Diet</h3>
+                    <p>Well-balanced meals with fruits, vegetables, and proteins.</p>
+                    <button>View Plan</button>
+                </div>
+            </div>
+
+            <h2>Generate Your Own Diet Plan</h2>
+            <form id="diet-form">
+                <label for="goal">Select Your Goal:</label>
+                <select id="goal">
+                    <option value="weight_loss">Weight Loss</option>
+                    <option value="muscle_gain">Muscle Gain</option>
+                    <option value="balanced">Balanced Diet</option>
+                </select>
+
+                <button type="submit">Generate Plan</button>
+            </form>
+
+            <div id="custom-diet"></div>
+        </section>
+    </main>
+
+    <script src="diet.js"></script>
+</body>
+</html>

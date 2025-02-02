@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Health Status</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Health Dashboard</h2>
+        <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="rem.html" target="_self" >Reminders</a></li>
+            <li><a href="diet.html" target="_self">Diet Plans</a></li>
+            <li><a href="sett.html" target="_self">Settings</a></li>
+            <li><a href="tips.html" target="_self">Health Tips</a></li>
+            <li><a href="login.html" target="_self">Logout</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <header class="top-header">
+            <h1>Stay Healthy, Stay Informed</h1>
+        </header>
+
+        <!-- Grid Layout -->
+        <section class="grid-container">
+            <!-- Personal Information Section -->
+            <div class="card">
+                <h2>Personal Information 
+                    <img id = image src="hha.jpeg" alt="cannot be displayed">
+                </h2>
+                <form>
+                    <label for="medication">Medication Details:</label>
+                    <input type="text" id="medication" placeholder="Enter medication details">
+
+                    <label for="appointment">Next Doctor Appointment:</label>
+                    <input type="date" id="appointment">
+
+                    <label for="weight">Current Weight (kg):</label>
+                    <input type="number" id="weight" placeholder="Enter weight">
+
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+
+            <!-- Health Reminders Section -->
+            
+
+            <!-- Personalized Health Tips -->
+            
+
+            <!-- Quick Actions Section -->
+            <div class="card quick-actions">
+                <h2>Quick Actions</h2>
+                <button>Add New Medication</button>
+                <a href="rem.html"  target="_self">
+                    <button>Set Reminder </button> 
+                </a>
+                <a href="diet.html"  target="_self">
+                <button>Generate Diet Plan</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Personalized Health Status. All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>

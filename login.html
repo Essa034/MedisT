@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0f2fe, #bfdbfe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            height: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
+
+        .form-container {
+            flex: 1;
+            padding: 3rem;
+        }
+
+        .image-container {
+            flex: 1;
+            background: url('/api/placeholder/600/600') center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-box {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #0f172a;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-box > p {
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #475569;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+        }
+
+        .input-group label a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .input-group label a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .remember input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #3b82f6;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.8rem;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+        }
+
+        .or {
+            text-align: center;
+            margin: 1.5rem 0;
+            color: #64748b;
+            position: relative;
+        }
+
+        .or::before,
+        .or::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .or::before { left: 0; }
+        .or::after { right: 0; }
+
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .google-btn,
+        .apple-btn {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background: white;
+            color: #0f172a;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+
+        .google-btn:hover,
+        .apple-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .google-btn img,
+        .apple-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .signup-link {
+            text-align: center;
+            color: #475569;
+        }
+
+        .signup-link a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 0.3rem;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                flex-direction: column;
+                height: auto;
+            }
+
+            .form-container {
+                padding: 2rem;
+            }
+
+            .image-container {
+                height: 200px;
+                order: -1;
+            }
+
+            .form-box {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box">
+                <h2>Welcome back!</h2>
+                <p>Enter your credentials to access your account.</p>
+                <form>
+                    <div class="input-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password <a href="#">Forgot password?</a></label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember</label>
+                    </div>
+                    <a href="home.html" target="_self">
+                        <button type="submit" id="submit-btn">Sign In
+                        </a>
+                    </button>
+                <p class="or">or</p>
+                <div class="social-login">
+                    <button class="google-btn">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIyLjU2IDEyLjI1Yy0uMy0uNzktLjcxLTEuNTEtMS4yMy0yLjE1LS41Mi0uNjQtMS4xMy0xLjE5LTEuODItMS42NC0uNjktLjQ1LTEuNDUtLjgtMi4yNy0xLjAyLS44Mi0uMjItMS42Ny0uMzMtMi41NS0uMzMtMS4xOSAwLTIuMzEuMjItMy4zNS42Ny0xLjA0LjQ1LTEuOTUgMS4wNi0yLjczIDEuODUtLjc4Ljc5LTEuMzkgMS43MS0xLjgyIDIuNzZzLS42NSAyLjE2LS42NSAzLjM1YzAgMS4xOS4yMiAyLjMuNjUgMy4zNS40MyAxLjA1IDEuMDQgMS45NyAxLjgyIDIuNzYuNzguNzkgMS42OSAxLjQgMi43MyAxLjg1IDEuMDQuNDUgMi4xNi42NyAzLjM1LjY3IDEuMzQgMCAyLjU0LS4yMyAzLjYxLS42OSAxLjA3LS40NiAxLjk3LTEuMDkgMi43MS0xLjg5LjY0LS43IDEuMTMtMS40OSAxLjQ2LTIuMzYuMzMtLjg3LjUtMS43NS41LTIuNjVoLTcuNzF2Mi45Nmg0LjQ4Yy0uMDguNTUtLjI4IDEuMDUtLjU5IDEuNTEtLjMxLjQ2LS43MS44My0xLjE5IDEuMTEtLjQ4LjI4LTEuMDEuNDktMS42MS42NC0uNi4xNS0xLjIxLjIyLTEuODQuMjItLjkxIDAtMS43NC0uMTctMi41LS41MS0uNzYtLjM0LTEuNDItLjgtMS45Ny0xLjM4LS41NS0uNTgtLjk4LTEuMjYtMS4yOS0yLjA0LS4zMS0uNzgtLjQ3LTEuNjEtLjQ3LTIuNDkgMC0uODguMTYtMS43MS40Ny0yLjQ5LjMxLS43OC43NC0xLjQ2IDEuMjktMi4wNC41NS0uNTggMS4yMS0xLjA0IDEuOTctMS4zOC43Ni0uMzQgMS41OS0uNTEgMi41LS41MS43NSAwIDEuNDQuMTIgMi4wOC4zNi42NC4yNCAxLjIuNTcgMS42OSAxIC40OS40My44OS45MyAxLjIgMS41bDMuMjQtMi4yNXoiIGZpbGw9IiM0Mjg1RjQiLz48L3N2Zz4=" alt="Google logo">
+                        Sign in with Google
+                    </button>
+                    <button class="apple-btn">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE4LjcxIDI0SDUuMjlBNS4yOSA1LjI5IDAgMCAxIDAgMTguNzFWNS4yOUE1LjI5IDUuMjkgMCAwIDEgNS4yOSAwaDEzLjQyQTUuMjkgNS4yOSAwIDAgMSAyNCA1LjI5djEzLjQyQTUuMjkgNS4yOSAwIDAgMSAxOC43MSAyNHptLTYuMjEtNi4yMWMuNDYgMCAuOTItLjEgMS4zNi0uMzFhMy4yNiAzLjI2IDAgMCAwIDEuODMtMi45NVY4LjM3YzAtLjkxLS4zNi0xLjc4LTEtMi40MmEzLjQyIDMuNDIgMCAwIDAtMi40Mi0xSDguNzNjLS45MSAwLTEuNzguMzYtMi40MiAxYTMuNDIgMy40MiAwIDAgMC0xIDIuNDJ2Ni4xNmMwIDEuMjUuNyAyLjQgMS44MyAyLjk1LjQ0LjIxLjkuMzEgMS4zNi4zMXoiIGZpbGw9IiMwMDAiLz48L3N2Zz4=" alt="Apple logo">
+                        Sign in with Apple
+                    </button>
+                </div>
+                <p class="signup-link">Don't have an account? <a href="signin.html" >Sign Up</a></p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://img.freepik.com/free-vector/holistic-medicine-abstract-concept-vector-illustration-alternative-natural-medicine-holistic-mental-therapy-whole-body-treatment-health-practice-disease-integrative-doctor-abstract-metaphor_335657-1696.jpg?uid=R161021309&ga=GA1.1.121392576.1738433341&semt=ais_hybrid" alt="">          
+        </div>
+    </div>
+</body>
+</html>
