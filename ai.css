@@ -1,0 +1,52 @@
+/* General Styling for the Body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    background-color: #f4f4f9;
+  }
+  
+  /* Container holding everything */
+  .container {
+    text-align: center;
+    width: 90%; /* Or any width you'd prefer */
+    max-width: 600px; /* Max width of the container */
+  }
+  
+  /* Style for the chatbox */
+  .chatbox {
+    width: 100%;
+    height: 300px; /* Fixed height for the chatbox */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow-y: auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Button container and centering */
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+  }
+  
+  /* Style for the button */
+  button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+  }
