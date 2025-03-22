@@ -12,8 +12,7 @@ Team Members
 - Member 2: Janet Maria Saji [Mar Athanasius College of Engineering]
 - Member 3: Delna Eldho [Mar Athanasius College of Engineering]
 
-### Hosted Project Link
-[mention your project hosted project link here]
+
 
 
 Project Description: Personalized Health Status Dashboard
